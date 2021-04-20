@@ -23,7 +23,7 @@ class Manga
     private $name;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string", length=255)
      */
     private $dateSortie;
 
