@@ -1,5 +1,5 @@
 {{ dump(products) }}
 
 {% for product in products %}
-    <li>{{ product.name }}</li>
+    <li>{{ product.name }} : {{ product.category.name }}</li>
 {% endfor %}
