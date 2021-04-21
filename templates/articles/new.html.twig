@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+
+    <h1>Créer un nouvel article</h1>
+{{ form_start(form_articles) }}
+    <div class="form-outline mb-4">
+        {{ form_row(form_articles.author) }}
+    </div>
+    <div class="form-outline mb-4">
+        {{ form_row(form_articles.category) }}
+    </div>
+
+{{ form_end(form_articles) }}
+
+</div>
+
+{% endblock %}
