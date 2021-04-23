@@ -4,7 +4,9 @@ namespace App\Entity;
 
 use App\Repository\ArticlesRepository;
 use Doctrine\ORM\Mapping as ORM;
-
+//use Symfony\Component\Validator\Constraints\Date;
+//use Symfony\Component\Validator\Constraints\DateTime;
+//use Vich\UploaderBundle\Mapping\Annotation as Vich;
 /**
  * @ORM\Entity(repositoryClass=ArticlesRepository::class)
  */
@@ -26,6 +28,62 @@ class Articles
      * @ORM\Column(type="datetime")
      */
     private $date;
+
+//    /**
+//     * @ORM\Column(type="string, length=100)
+//     */
+//    private $thumbnail;
+//
+//    /**
+//     * @Vich\UploadableField(mapping="thumnails", fileNameProperty="thumbnail")
+//     */
+//    private $thumbnailFile;
+//
+//    /**
+//     * @ORM\Column (type='datetime')
+//     */
+//    private $updatedAt;
+//
+//    public function __construct()
+//    {
+//        $this->updatedAt = new DateTime();
+//    }
+//
+//    /**
+//     * @return mixed
+//     */
+//    public function getThumbnailFile()
+//    {
+//        return $this->thumbnailFile;
+//    }
+//
+//    /**
+//     * @param mixed $thumbnailFile
+//     */
+//    public function setThumbnailFile($thumbnailFile): void
+//    {
+//        $this->thumbnailFile = $thumbnailFile;
+//
+//        if($thumbnailFile) {
+//            $this->updatedAt = new DateTime();
+//        }
+//    }
+//
+//    /**
+//     * @return mixed
+//     */
+//    public function getThumbnail()
+//    {
+//        return $this->thumbnail;
+//    }
+//
+//    /**
+//     * @param mixed $thumbnail
+//     */
+//    public function setThumbnail($thumbnail): void
+//    {
+//        $this->thumbnail = $thumbnail;
+//    }
 
     /**
      * @ORM\Column(type="text")
