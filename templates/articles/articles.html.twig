@@ -10,6 +10,12 @@
             <a href="/admin" class="btn btn-info">Dashboard</a>
             <a href="articles/new" class="btn btn-primary">New article</a>
         {% endif %}
+        {% if app.user %}
+            <h2>Welcome {{ app.user.getFirstname }} !</h2>
+            <a class="btn btn-info" href="/logout">Logout </a>
+        {% endif %}
+
+
     </div>
     {% for article in articles %}
     <div class="row">
